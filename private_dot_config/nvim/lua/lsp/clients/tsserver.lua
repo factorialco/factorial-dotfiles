@@ -4,8 +4,8 @@ local ts_utils = require("nvim-lsp-ts-utils")
 
 local M = {}
 
-M.get_ops = function(on_attach)
-	return {
+M.setup = function(on_attach, capabilities)
+	lspconfig.tsserver.setup({
 		root_dir = lspconfig.util.root_pattern("package.json"),
 		init_options = ts_utils.init_options,
 		on_attach = function(client, bufnr)
@@ -25,7 +25,8 @@ M.get_ops = function(on_attach)
 			u.buf_map(bufnr, "n", "gr", ":TSLspRenameFile<CR>")
 			u.buf_map(bufnr, "n", "gI", ":TSLspImportAll<CR>")
 		end,
-	}
+		capabilities = capabilities,
+	})
 end
 
 return M

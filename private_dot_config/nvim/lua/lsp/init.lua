@@ -2,14 +2,7 @@ local lspconfig = require("lspconfig")
 local u = require("utils")
 local lsp = vim.lsp
 
-local border_opts = {
-	border = "rounded",
-	focusable = false,
-	scope = "line",
-	style = "minimal",
-	source = "always",
-}
-
+local border_opts = { border = "rounded", focusable = false }
 local signs = {
 	{ name = "DiagnosticSignError", text = "" },
 	{ name = "DiagnosticSignWarn", text = "" },
@@ -34,19 +27,19 @@ lsp.handlers["textDocument/signatureHelp"] = lsp.with(lsp.handlers.signature_hel
 lsp.handlers["textDocument/hover"] = lsp.with(lsp.handlers.hover, border_opts)
 
 local lsp_formatting = function(bufnr)
+	local clients = vim.lsp.get_active_clients({ bufnr = bufnr })
 	lsp.buf.format({
 		bufnr = bufnr,
-		filter = function(clients)
-			return vim.tbl_filter(function(client)
-				if client.name == "eslint" then
-					return true
-				end
-				if client.name == "null-ls" then
-					return not u.table.some(clients, function(_, other_client)
-						return other_client.name == "eslint"
-					end)
-				end
-			end, clients)
+		filter = function(client)
+			if client.name == "eslint" then
+				return not eslint_disabled_buffers[bufnr]
+			end
+
+			if client.name == "null-ls" then
+				return not u.table.some(clients, function(_, other_client)
+					return other_client.name == "eslint" and not eslint_disabled_buffers[bufnr]
+				end)
+			end
 		end,
 	})
 end
@@ -86,15 +79,15 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-local servers = { "tsserver", "eslint", "sorbet", "solargraph", "sumneko_lua" }
+local servers = {
+	"tsserver",
+	"eslint",
+	"sorbet",
+	"solargraph",
+	"sumneko_lua",
+	"null-ls",
+}
+
 for _, server in pairs(servers) do
-	local status_ok, config = pcall(require, "lsp.clients." .. server)
-	local client_ops = {}
-	if status_ok then
-		client_ops = config.get_ops(on_attach)
-	end
-
-	require("lspconfig")[server].setup(client_ops)
+	require("lsp.clients." .. server).setup(on_attach, capabilities)
 end
-
-require("lsp.clients.null-ls").setup(on_attach)

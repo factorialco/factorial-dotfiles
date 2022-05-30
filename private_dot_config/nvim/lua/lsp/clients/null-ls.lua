@@ -14,12 +14,7 @@ local sources = {
 		condition = with_root_file(".rubocop.yml"),
 		timeout = 30000,
 	}),
-	b.diagnostics.shellcheck.with({
-		command = ".nvim/shellcheck",
-		args = { "$FILENAME" },
-	}),
 	b.diagnostics.semgrep.with({
-		command = ".nvim/semgrep",
 		condition = with_root_file(".semgrep.yml"),
 		args = { "$FILENAME" },
 	}),

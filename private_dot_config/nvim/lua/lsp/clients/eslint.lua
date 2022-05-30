@@ -1,8 +1,8 @@
 local M = {}
 local lspconfig = require("lspconfig")
 
-M.get_ops = function(on_attach, capabilities)
-	return {
+M.setup = function(on_attach, capabilities)
+	lspconfig.eslint.setup({
 		root_dir = lspconfig.util.root_pattern(".eslintrc", ".eslintrc.js", ".eslintrc.json"),
 		on_attach = function(client, bufnr)
 			client.server_capabilities.documentFormattingProvider = true
@@ -25,7 +25,7 @@ M.get_ops = function(on_attach, capabilities)
 				return vim.lsp.handlers["window/showMessageRequest"](nil, result)
 			end,
 		},
-	}
+	})
 end
 
 return M
