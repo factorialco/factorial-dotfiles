@@ -88,7 +88,7 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
 local servers = { "tsserver", "eslint", "sorbet", "solargraph", "null-ls", "sumneko_lua" }
 for _, server in pairs(servers) do
-	local status_ok, config = pcall(require, "lsp.clients." .. server.name)
+	local status_ok, config = pcall(require, "lsp.clients." .. server)
 	local client_ops = {}
 	if status_ok then
 		client_ops = config.get_ops(on_attach)
