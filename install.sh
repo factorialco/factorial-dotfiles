@@ -8,3 +8,6 @@ git branch -M main
 git pull origin main
 ~/bin/chezmoi apply
 source ~/.bashrc
+
+# Install packer dependencies
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'

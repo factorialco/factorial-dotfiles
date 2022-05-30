@@ -1,4 +1,3 @@
-local lsp_installer = require("nvim-lsp-installer")
 local lspconfig = require("lspconfig")
 local u = require("utils")
 local lsp = vim.lsp
@@ -87,16 +86,15 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-lsp_installer.on_server_ready(function(server)
-	local opts = { capabilities = capabilities }
-	local client_ops = {}
-
+local servers = { "tsserver", "eslint", "sorbet", "solargraph", "null-ls", "sumneko_lua" }
+for _, server in pairs(servers) do
 	local status_ok, config = pcall(require, "lsp.clients." .. server.name)
+	local client_ops = {}
 	if status_ok then
 		client_ops = config.get_ops(on_attach)
 	end
 
-	server:setup(vim.tbl_deep_extend("force", opts, client_ops))
-end)
+	require("lspconfig")[server].setup(client_ops)
+end
 
 require("lsp.clients.null-ls").setup(on_attach)
