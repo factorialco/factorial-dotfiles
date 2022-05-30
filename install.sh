@@ -10,4 +10,4 @@ git pull origin main
 source ~/.bashrc
 
 # Install packer dependencies
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' -u ~/.config/nvim/lua/plugins.lua
