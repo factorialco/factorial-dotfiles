@@ -11,6 +11,7 @@ In order for these dotfiles to shine We recommend installing:
   - [bat](https://github.com/sharkdp/bat): Alternative to `cat` with highlighting.
   - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy): Supercharge your git diffs
   - [exa](https://github.com/ogham/exa): ls on steroids
+  - [tmux](https://github.com/tmux/tmux): terminal multiplexer
 
 ## nvim
 
