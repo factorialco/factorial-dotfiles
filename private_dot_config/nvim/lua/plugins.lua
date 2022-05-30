@@ -51,7 +51,6 @@ return require("packer").startup(function(use)
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig", -- A collection of common configurations for Neovim's built-in language server client.
-		"williamboman/nvim-lsp-installer", -- Provides the missing :LspInstall for nvim-lspconfig
 	})
 
 	-- Illuminate

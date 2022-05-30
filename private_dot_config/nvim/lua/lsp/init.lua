@@ -86,7 +86,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-local servers = { "tsserver", "eslint", "sorbet", "solargraph", "null-ls", "sumneko_lua" }
+local servers = { "tsserver", "eslint", "sorbet", "solargraph", "sumneko_lua" }
 for _, server in pairs(servers) do
 	local status_ok, config = pcall(require, "lsp.clients." .. server)
 	local client_ops = {}
