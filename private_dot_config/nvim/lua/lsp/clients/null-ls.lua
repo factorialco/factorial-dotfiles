@@ -21,13 +21,6 @@ local sources = {
 	}),
 	b.formatting.rubocop.with({
 		condition = with_root_file(".rubocop.yml"),
-        args = {
-            "--auto-correct",
-            "-f",
-            "quiet",
-            "--stdin",
-            "$FILENAME",
-        },
 	}),
 
 	-- b.formatting.shfmt,
