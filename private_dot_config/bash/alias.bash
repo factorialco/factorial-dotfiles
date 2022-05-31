@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# List directory contents
-alias ls='ls -G'        # Compact view, show colors
-alias ll='ls -al'
-
 alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
 
