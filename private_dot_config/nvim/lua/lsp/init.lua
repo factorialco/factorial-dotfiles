@@ -32,12 +32,12 @@ local lsp_formatting = function(bufnr)
 		bufnr = bufnr,
 		filter = function(client)
 			if client.name == "eslint" then
-				return not eslint_disabled_buffers[bufnr]
+				return true
 			end
 
 			if client.name == "null-ls" then
 				return not u.table.some(clients, function(_, other_client)
-					return other_client.name == "eslint" and not eslint_disabled_buffers[bufnr]
+					return other_client.name == "eslint"
 				end)
 			end
 		end,
