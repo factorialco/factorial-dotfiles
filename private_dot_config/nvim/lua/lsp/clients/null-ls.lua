@@ -17,17 +17,15 @@ local sources = {
 	b.diagnostics.semgrep.with({
 		condition = with_root_file(".semgrep.yml"),
 	}),
-	b.diagnostics.markdownlint,
-	b.diagnostics.write_good,
-	b.diagnostics.rubocop,
 
-	b.formatting.shfmt,
-	b.formatting.stylua,
 	b.formatting.trim_whitespace.with({
 		filetypes = { "tmux", "zsh" },
 	}),
+
+	-- b.formatting.shfmt,
+	-- b.formatting.stylua,
 	-- b.formatting.rubocop,
-	b.formatting.terraform_fmt,
+	-- b.formatting.terraform_fmt,
 }
 
 local M = {}

@@ -116,13 +116,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"rcarriga/nvim-notify",
-		config = function()
-			require("plugins/vim-notify")
-		end,
-	})
-
 	-- Comments
 	use({
 		"numToStr/Comment.nvim",
