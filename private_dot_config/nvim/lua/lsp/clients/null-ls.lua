@@ -10,9 +10,7 @@ end
 
 local sources = {
 	b.diagnostics.rubocop.with({
-		command = ".nvim/rubocop",
 		condition = with_root_file(".rubocop.yml"),
-		timeout = 30000,
 	}),
 	b.diagnostics.semgrep.with({
 		condition = with_root_file(".semgrep.yml"),
@@ -21,10 +19,19 @@ local sources = {
 	b.formatting.trim_whitespace.with({
 		filetypes = { "tmux", "zsh" },
 	}),
+	b.formatting.rubocop.with({
+		condition = with_root_file(".rubocop.yml"),
+        args = {
+            "--auto-correct",
+            "-f",
+            "quiet",
+            "--stdin",
+            "$FILENAME",
+        },
+	}),
 
 	-- b.formatting.shfmt,
 	-- b.formatting.stylua,
-	-- b.formatting.rubocop,
 	-- b.formatting.terraform_fmt,
 }
 
