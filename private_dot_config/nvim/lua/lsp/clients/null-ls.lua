@@ -16,7 +16,6 @@ local sources = {
 	}),
 	b.diagnostics.semgrep.with({
 		condition = with_root_file(".semgrep.yml"),
-		args = { "$FILENAME" },
 	}),
 	b.diagnostics.markdownlint,
 	b.diagnostics.write_good,
