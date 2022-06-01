@@ -172,6 +172,15 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+  -- Colorize hex values
+  use("ap/vim-css-color")
+
+  -- Modify faster (){}[] contents
+  use("wellle/targets.vim")
+
+  -- Find and replace
+  use("nvim-pack/nvim-spectre")
+
 	-- Status Line
 	use({
 		"hoob3rt/lualine.nvim",
