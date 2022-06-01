@@ -151,13 +151,6 @@ return require("packer").startup(function(use)
 	-- LSP addons
 	use({ "jose-elias-alvarez/nvim-lsp-ts-utils" })
 	use({ "jose-elias-alvarez/null-ls.nvim" })
-	use({
-		"stevearc/dressing.nvim",
-		requires = "MunifTanjim/nui.nvim",
-		config = function()
-			require("plugins/dressing")
-		end,
-	})
 
 	-- Explorer
 	use({
