@@ -81,6 +81,7 @@ local mappings = {
 		w = { "<cmd>FzfLua grep_cword<cr>", "Current word" },
 		v = { "<cmd>FzfLua grep_visual<cr>", "Visual" },
 		g = { "<cmd>FzfLua git_status<cr>", "Git status" },
+		r = { "<cmd>FzfLua lsp_references<cr>", "LSP References" },
 	},
 
 	d = {
