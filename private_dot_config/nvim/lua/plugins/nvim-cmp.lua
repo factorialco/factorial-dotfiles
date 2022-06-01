@@ -18,6 +18,7 @@ cmp.setup({
 				buffer = "[Buffer]",
 				nvim_lsp = "[LSP]",
 				vsnip = "[Vsnip]",
+        path = "[Path]",
 			},
 		}),
 	},
@@ -72,26 +73,6 @@ cmp.setup({
 		{ name = "vsnip", priority = 9999 },
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
+    { name = "path" },
 	}),
 })
-
--- TODO: Enable this and make it work?
-
--- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
--- cmp.setup.cmdline('/', {
---     sources = {
---         { name = 'buffer' }
---     }
--- })
-
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
--- cmp.setup.cmdline(':', {
---     sources = cmp.config.sources(
---         {
---             { name = 'path' }
---         },
---         {
---             { name = 'cmdline' }
---         }
---     )
--- })
