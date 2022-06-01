@@ -11,6 +11,8 @@ end
 local sources = {
 	b.diagnostics.rubocop.with({
 		condition = with_root_file(".rubocop.yml"),
+		command = "bundle",
+		args = { "exec", "rubocop", "-f", "json", "--stdin", "$FILENAME" },
 	}),
 	b.diagnostics.semgrep.with({
 		condition = with_root_file(".semgrep.yml"),
@@ -21,6 +23,8 @@ local sources = {
 	}),
 	b.formatting.rubocop.with({
 		condition = with_root_file(".rubocop.yml"),
+		command = "bundle",
+		args = { "exec", "rubocop", "--auto-correct", "-f", "quiet", "--stderr", "--stdin", "$FILENAME" },
 	}),
 
 	-- b.formatting.shfmt,
