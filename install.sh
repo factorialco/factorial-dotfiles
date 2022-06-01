@@ -1,4 +1,3 @@
-sh -c "$(curl -fsLS chezmoi.io/get)"
 ~/bin/chezmoi init
 cd ~/.local/share/chezmoi
 git remote add origin https://github.com/masylum/factorial-dotfiles.git

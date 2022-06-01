@@ -11,6 +11,3 @@ export EDITOR=nvim
 
 # Set the vi mode for bash
 set -o vi
-
-# Add home directory binaries to PATH
-export PATH="~/bin:$PATH"
