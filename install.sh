@@ -1,6 +1,6 @@
 ~/bin/chezmoi init
 cd ~/.local/share/chezmoi
-git remote add origin https://github.com/masylum/factorial-dotfiles.git
+git remote add origin https://github.com/victorblasco/factorial-dotfiles.git
 # TODO: Move repo to factorial
 git branch -M main
 git pull origin main
