@@ -57,3 +57,7 @@ vim.keymap.set("v", "<C-c>", "+y>CR>", opts)
 
 -- Nvimtree
 vim.keymap.set("n", "<leader>p", ":NvimTreeToggle<cr>", opts)
+
+-- FzfLua --
+vim.keymap.set("n", "<leader>o", "<cmd>lua require('fzf-lua').files()<CR>", opts)
+vim.keymap.set("n", "<leader>a", "<cmd>lua require('fzf-lua').live_grep()<CR>", opts)
