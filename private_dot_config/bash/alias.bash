@@ -9,9 +9,12 @@ then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 
-# GIT
+# Jumps
+alias jb='cd /workspace/backend/'
+alias jf='cd /workspace/frontend/'
+alias jc='cd ~/.local/share/chezmoi/'
 
-# Aliases
+# GIT Aliases
 alias gap='git add -p'
 alias gs='git status'
 alias gl='git pull'
