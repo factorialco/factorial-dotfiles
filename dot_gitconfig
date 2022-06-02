@@ -1,0 +1,32 @@
+[alias]
+  co = checkout
+  ci = commit
+  cia = commit --amend
+  st = status
+  br = branch
+  su = submodule update
+  sl = stash list
+  sp = stash pop
+  rb = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rba = rebase --abort
+  last = log -1
+  l = log --pretty=format:'%Cred%h%Creset - %C(green) %an %C(reset) - %C(yellow)%d%Creset %s %Cgreen(%cr) %Creset'
+  da = diff --cached
+  pushnew = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+  recent = "!git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | head -n 100"
+  wip = "!git add --all . && git commit -m 'WIP'"
+  fp = fetch -p
+
+  pam = "!BRANCH=`git recent | fzf` && git checkout ${BRANCH}"
+[push]
+  default = tracking
+[pull]
+  default = tracking
+[color]
+  ui = true
+[merge]
+  tool = vimdiff
+[mergetool]
+  keepBackup = false
