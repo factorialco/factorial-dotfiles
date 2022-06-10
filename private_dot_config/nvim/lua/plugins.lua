@@ -171,6 +171,8 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+  use("bluz71/vim-nightfly-guicolors")
+
   -- Colorize hex values
   use("ap/vim-css-color")
 

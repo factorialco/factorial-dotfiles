@@ -14,7 +14,7 @@ require("fzf-lua").setup({
 	},
 	previewers = {
 		bat = {
-			theme = "Catppuccin",
+			theme = "nightfly",
 		},
 	},
 })

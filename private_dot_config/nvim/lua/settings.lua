@@ -12,7 +12,7 @@ cmd("set synmaxcol=200") -- Limits the syntax highlighting
 vim.o.termguicolors = true
 vim.o.background = "dark"
 vim.g.syntax = true
-cmd([[colorscheme catppuccin]])
+cmd([[colorscheme nightfly]])
 
 -- SETTINGS
 opt.backup = false -- creates a backup file
