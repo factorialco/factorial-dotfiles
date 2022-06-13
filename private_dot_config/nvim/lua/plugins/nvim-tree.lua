@@ -1,4 +1,4 @@
--- local colors = require("catppuccin.api.colors").get_colors()
+local colors = require("catppuccin.api.colors").get_colors()
 vim.cmd("highlight NvimTreeGitNew gui=NONE guifg=" .. colors.green .. " guibg=NONE")
 
 require("nvim-tree").setup({
