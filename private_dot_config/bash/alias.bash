@@ -22,3 +22,6 @@ alias gco='git checkout'
 alias gg='git grep'
 alias gst='git diff master --compact-summary'
 alias gca='git commit --amend'
+
+# Devenv
+alias devenv='tmuxinator start -p gitpod/.tmuxinator.yml'
