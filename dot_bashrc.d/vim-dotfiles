@@ -8,7 +8,6 @@ source ~/.config/bash/prompt.bash
 
 # Set the editor and git editor
 export EDITOR=nvim
-export GIT_EDITOR=nvim
 
 # Set the vi mode for bash
 set -o vi
