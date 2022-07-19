@@ -169,6 +169,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require("plugins/catppuccin")
 		end,
+		commit = "7f718802b63de7badb3fec3150b345bb6b7674bb",
 	})
 
   -- Colorize hex values
