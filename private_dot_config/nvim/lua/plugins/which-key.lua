@@ -71,6 +71,7 @@ local mappings = {
 		d = { "<cmd>TroubleToggle lsp_definitions<cr>", "Definitions" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		r = { "<cmd>LspRename<cr>", "Rename" },
+		f = { "<cmd>:lua vim.lsp.buf.code_action()<cr>", "Fix" },
 	},
 
 	s = {
