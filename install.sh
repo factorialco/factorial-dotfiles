@@ -13,6 +13,6 @@ popd
 source ~/.bashrc
 
 # Install packer dependencies
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' -u ~/.config/nvim/lua/plugins.lua
-
-# TODO: Add the same for treesitter
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' # Yep, twice
+nvim --headless -c 'TSUpdateSync'
