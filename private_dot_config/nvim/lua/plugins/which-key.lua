@@ -56,10 +56,15 @@ vim.keymap.set("n", "<Leader>h", ":let @/=''<CR>", { silent = true })
 -- Fast fuzzy find
 vim.keymap.set("n", "<Leader><Leader>", "<cmd>FzfLua git_files<cr>", { silent = true })
 
+-- Resume Fast fuzzy find
+vim.keymap.set("n", "<Leader>r", "<cmd>FzfLua resume<cr>", { silent = true })
+
 local mappings = {
 	n = "NerdTree",
 	f = "Find File",
 	h = "No Highlight",
+
+	r = "Resume fuzzy search",
 
 	["<space>"] = "Fuzzy search",
 
