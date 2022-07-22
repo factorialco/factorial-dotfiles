@@ -44,6 +44,7 @@ main ones:
 - `<leader>` + `<leader>`: Search files in the current project with FZF
 - `<leader>` + `n`: Open / Close the file explorer
 - `<leader>` + `m`: Find the current file in the file explorer
+- `<leader>` + `r`: Resume a previous fuzzy finder search
 - `<leader>` + `d` + `d`: Find all the LSP offenses for the current file
 - `<leader>` + `l` + `a`: Find all the LSP references
 - `<leader>` + `l` + `d`: Find all the LSP definitions
