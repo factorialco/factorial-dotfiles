@@ -20,7 +20,7 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gg='git grep'
-alias gst='git diff master --compact-summary'
+alias gst='git diff main --compact-summary'
 alias gca='git commit --amend'
 
 # Devenv
