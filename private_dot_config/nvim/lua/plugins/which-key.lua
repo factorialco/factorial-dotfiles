@@ -81,7 +81,7 @@ local mappings = {
 
 	s = {
 		name = "Search",
-		f = { "<cmd>FzfLua files<cr>", "Find File" },
+		f = { "<cmd>FzfLua git_files<cr>", "Find File" },
 		b = { "<cmd>FzfLua buffers<cr>", "Find buffer" },
 		t = { "<cmd>FzfLua grep<cr>", "Text" },
 		w = { "<cmd>FzfLua grep_cword<cr>", "Current word" },
