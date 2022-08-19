@@ -81,13 +81,7 @@ return require("packer").startup(function(use)
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-buffer" })
-	use({ "hrsh7th/cmp-vsnip" })
 	use({ "onsails/lspkind-nvim" })
-
-	-- Snippets
-	use({ "hrsh7th/vim-vsnip" })
-	use({ "hrsh7th/vim-vsnip-integ" })
-	use({ "rafamadriz/friendly-snippets" })
 
 	-- Treesitter
 	use({
@@ -171,14 +165,14 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-  -- Colorize hex values
-  use("ap/vim-css-color")
+	-- Colorize hex values
+	use("ap/vim-css-color")
 
-  -- Modify faster (){}[] contents
-  use("wellle/targets.vim")
+	-- Modify faster (){}[] contents
+	use("wellle/targets.vim")
 
-  -- Find and replace
-  use("nvim-pack/nvim-spectre")
+	-- Find and replace
+	use("nvim-pack/nvim-spectre")
 
 	-- Status Line
 	use({
