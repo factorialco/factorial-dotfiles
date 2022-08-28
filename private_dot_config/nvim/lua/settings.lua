@@ -12,7 +12,6 @@ cmd("set synmaxcol=200") -- Limits the syntax highlighting
 vim.o.termguicolors = true
 vim.o.background = "dark"
 vim.g.syntax = true
-cmd([[colorscheme catppuccin]])
 
 -- SETTINGS
 opt.backup = false -- creates a backup file
@@ -49,6 +48,7 @@ opt.softtabstop = 2 -- TODO: document
 opt.expandtab = true -- convert tabs to spaces
 
 opt.cursorline = true -- highlight the current line
+opt.colorcolumn = "80" -- highlight the 80th character
 opt.number = true -- set numbered lines
 opt.relativenumber = false -- set relative numbered lines
 opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
