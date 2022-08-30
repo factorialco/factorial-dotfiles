@@ -1,11 +1,13 @@
--- This is not working
-vim.cmd("let g:Illuminate_ftblacklist = ['NvimTree']")
-require("utils").define_augroups({
-  _illuminateWord = {
-    {
-      "VimEnter",
-      "*",
-      "hi illuminatedWord cterm=underline gui=underline",
-    },
-  },
+-- TODO: <a-n> and <a-p> not working
+vim.cmd("hi def IlluminatedWordText gui=underline")
+vim.cmd("hi def IlluminatedWordRead gui=underline")
+vim.cmd("hi def IlluminatedWordWrite gui=underline")
+
+vim.g.Illuminate_useDeprecated = 1
+
+require('illuminate').configure({
+    filetypes_denylist = {
+        'NvimTree',
+        'fugitive',
+    }
 })
