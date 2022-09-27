@@ -151,6 +151,9 @@ return require("packer").startup(function(use)
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils" })
     use({ "jose-elias-alvarez/null-ls.nvim" })
 
+    -- Prettier
+    use('MunifTanjim/prettier.nvim')
+
     -- Explorer
     use({
         "kyazdani42/nvim-tree.lua",
