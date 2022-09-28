@@ -209,6 +209,10 @@ return require("packer").startup(function(use)
             require("plugins/tmux-navigator")
         end,
     })
+    use({
+      "mg979/vim-visual-multi",
+      branch = 'master'
+    })
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
