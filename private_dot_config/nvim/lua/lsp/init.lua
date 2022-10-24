@@ -55,6 +55,7 @@ local servers = {
     "solargraph",
     "sumneko_lua",
     "null-ls",
+    "prettier",
 }
 
 for _, server in pairs(servers) do
