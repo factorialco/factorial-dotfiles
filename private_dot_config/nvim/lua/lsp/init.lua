@@ -53,7 +53,7 @@ local servers = {
   "eslint",
   "sorbet",
   "solargraph",
-  "sumneko_lua",
+  "lua_ls",
   "null-ls",
 }
 
