@@ -1,12 +1,15 @@
 local u = require("utils")
 local lsp = vim.lsp
 
+-- Mega HACK to support nvm
+vim.cmd("let $PATH = '/home/gitpod/.nvm/versions/node/v16.20.0/bin:' . $PATH")
+
 local border_opts = { border = "rounded", focusable = false }
 local signs = {
   { name = "DiagnosticSignError", text = "" },
-  { name = "DiagnosticSignWarn", text = "" },
-  { name = "DiagnosticSignHint", text = "" },
-  { name = "DiagnosticSignInfo", text = "" },
+  { name = "DiagnosticSignWarn",  text = "" },
+  { name = "DiagnosticSignHint",  text = "" },
+  { name = "DiagnosticSignInfo",  text = "" },
 }
 
 for _, sign in ipairs(signs) do

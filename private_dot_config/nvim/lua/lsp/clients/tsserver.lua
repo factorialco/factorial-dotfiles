@@ -7,7 +7,6 @@ local M = {}
 M.setup = function(on_attach, capabilities)
   lspconfig.tsserver.setup({
     root_dir = lspconfig.util.root_pattern("package.json"),
-    cmd = { "/home/gitpod/.nvm/versions/node/v16.20.0/bin/typescript-language-server", "--stdio" },
     init_options = ts_utils.init_options,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)

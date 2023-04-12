@@ -4,7 +4,6 @@ local lspconfig = require("lspconfig")
 M.setup = function(on_attach, capabilities)
   lspconfig.eslint.setup({
     root_dir = lspconfig.util.root_pattern(".eslintrc", ".eslintrc.js", ".eslintrc.json"),
-    cmd = { "/home/gitpod/.nvm/versions/node/v16.20.0/bin/vscode-eslint-language-server", "--stdio" },
     on_attach = function(client, bufnr)
       client.server_capabilities.documentFormattingProvider = true
       on_attach(client, bufnr)
