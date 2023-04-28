@@ -56,6 +56,7 @@ local servers = {
   "eslint",
   "sorbet",
   "solargraph",
+  "syntax_tree",
   "lua_ls",
   "null-ls",
 }

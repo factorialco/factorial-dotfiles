@@ -58,10 +58,10 @@ return require("packer").startup(function(use)
   })
 
   -- LSP
-  use({ "williamboman/mason.nvim" })             -- An LSP installer
-  use({ "williamboman/mason-lspconfig.nvim" })   -- Bridge between lspconfig and mason
+  use({ "williamboman/mason.nvim" })           -- An LSP installer
+  use({ "williamboman/mason-lspconfig.nvim" }) -- Bridge between lspconfig and mason
   use({
-    "neovim/nvim-lspconfig",                     -- A collection of common configurations for Neovim's built-in language server client.
+    "neovim/nvim-lspconfig",                   -- A collection of common configurations for Neovim's built-in language server client.
     config = function()
       require("plugins/mason")
       require("lsp")
@@ -74,7 +74,7 @@ return require("packer").startup(function(use)
     config = function()
       require("plugins/vim-illuminate")
     end,
-  })   -- Illuminates current word in the document
+  }) -- Illuminates current word in the document
 
   -- Fuzzy finder
   use({ "junegunn/fzf", run = "./install --all" })
@@ -97,7 +97,7 @@ return require("packer").startup(function(use)
   use({ "hrsh7th/cmp-nvim-lsp" })
   use({ "hrsh7th/cmp-buffer" })
   use({ "onsails/lspkind-nvim" })
-  use({ "L3MON4D3/LuaSnip" })   -- Luasnip: Only for expansion of nvim-cmp
+  use({ "L3MON4D3/LuaSnip" }) -- Luasnip: Only for expansion of nvim-cmp
 
   -- Treesitter
   use({
@@ -158,7 +158,7 @@ return require("packer").startup(function(use)
   use({
     "kyazdani42/nvim-tree.lua",
     requires = {
-      "kyazdani42/nvim-web-devicons",       -- optional, for file icon
+      "kyazdani42/nvim-web-devicons", -- optional, for file icon
     },
     config = function()
       require("plugins/nvim-tree")
@@ -204,7 +204,7 @@ return require("packer").startup(function(use)
     config = function()
       require("nvim-surround").setup()
     end,
-  })   -- TODO: Use more
+  }) -- TODO: Use more
   use("tpope/vim-repeat")
   use({
     "christoomey/vim-tmux-navigator",
