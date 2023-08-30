@@ -2,15 +2,6 @@ local colors = require("catppuccin.palettes").get_palette()
 vim.cmd("highlight NvimTreeGitNew gui=NONE guifg=" .. colors.green .. " guibg=NONE")
 
 require("nvim-tree").setup({
-  view = {
-    mappings = {
-      list = {
-        { key = "s", action = "vsplit" },
-        { key = "i", action = "split" },
-        { key = "p", action = "parent_node" },
-      },
-    },
-  },
   renderer = {
     indent_markers = {
       enable = true,
