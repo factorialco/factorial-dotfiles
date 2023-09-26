@@ -43,7 +43,7 @@ return require("packer").startup(function(use)
 
   -- Need to load first
   use({ "lewis6991/impatient.nvim" })
-  use({ "nathom/filetype.nvim" })
+  -- Disabled because is raising some exceptions use({ "nathom/filetype.nvim" })
   use({ "nvim-lua/plenary.nvim" })
   use({ "nvim-lua/popup.nvim" })
   use({ "kyazdani42/nvim-web-devicons" })
